@@ -43,22 +43,28 @@ export default function RealityCheck() {
 
       {/* Background ghost number */}
       <div className="absolute right-0 bottom-0 pointer-events-none select-none overflow-hidden leading-none">
-        <span className="font-display font-bold text-[30vw] text-white/[0.025]">80</span>
+        <span className="font-display font-bold text-[30vw] text-white/[0.025]">
+          80
+        </span>
       </div>
 
       <div className="max-w-7xl mx-auto relative">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-16 lg:gap-28 items-center">
-
           {/* Left — outlined stat number */}
           <div data-rc className="opacity-0">
             <div
               className="font-display font-bold leading-none select-none text-[clamp(5rem,13vw,11rem)]"
-              style={{ WebkitTextStroke: "1.5px rgba(184,155,94,0.55)", color: "transparent" }}
+              style={{
+                WebkitTextStroke: "1.5px rgba(184,155,94,0.55)",
+                color: "transparent",
+              }}
             >
               80%
             </div>
             <p className="text-silver/40 text-xs uppercase tracking-widest mt-4 font-sans leading-relaxed">
-              of men know what<br />they should do.
+              of men know what
+              <br />
+              they should do.
             </p>
             <p
               className="text-xs uppercase tracking-widest mt-1 font-sans font-semibold"
@@ -70,7 +76,10 @@ export default function RealityCheck() {
 
           {/* Right — copy */}
           <div>
-            <p data-rc className="text-gold uppercase tracking-[0.35em] text-[0.65rem] font-semibold font-sans mb-8 opacity-0">
+            <p
+              data-rc
+              className="text-gold uppercase tracking-[0.35em] text-[0.65rem] font-semibold font-sans mb-8 opacity-0"
+            >
               The Reality Check
             </p>
             <h2
@@ -83,19 +92,24 @@ export default function RealityCheck() {
               <span className="text-gradient-gold">plan problem.</span>
             </h2>
             <div data-rc className="w-12 h-px bg-gold mb-8 opacity-0" />
-            <p data-rc className="text-silver/55 text-base leading-relaxed max-w-lg mb-12 font-sans opacity-0">
+            <p
+              data-rc
+              className="text-silver/55 text-base leading-relaxed max-w-lg mb-12 font-sans opacity-0"
+            >
               Most men are ambitious but drifting. They fight low confidence,
               poor habits, and a lack of real direction. If you&apos;re waiting
-              for a permission slip to start leading your life — it&apos;s
-              never coming.
+              for a permission slip to start leading your life — it&apos;s never
+              coming.
             </p>
             <div data-rc className="opacity-0">
-              <Link href="/contact" className="btn-outline inline-block text-xs">
+              <Link
+                href="/contact"
+                className="btn-outline inline-block text-xs"
+              >
                 Get the Roadmap
               </Link>
             </div>
           </div>
-
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/15 to-transparent" />
