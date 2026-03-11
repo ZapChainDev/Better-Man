@@ -28,7 +28,7 @@ export default function RealityCheck() {
             },
           },
         );
-      }, ref.current);
+      }, ref.current ?? undefined);
     }
     init();
     return () => ctx && ctx.revert();
