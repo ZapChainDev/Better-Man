@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: "Inter", sans-serif;
+    --font-oswald: "Oswald", sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-charcoal text-silver;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    @apply bg-gold text-charcoal;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-charcoal;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold rounded-full;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-gold text-charcoal font-bold tracking-widest uppercase px-8 py-4
+           transition-all duration-300 hover:brightness-110 hover:scale-[1.02]
+           active:scale-[0.98] cursor-pointer;
+  }
+
+  .btn-outline {
+    @apply border border-gold text-gold font-bold tracking-widest uppercase px-8 py-4
+           transition-all duration-300 hover:bg-gold hover:text-charcoal
+           active:scale-[0.98] cursor-pointer;
+  }
+
+  .section-label {
+    @apply text-gold font-display tracking-[0.25em] uppercase text-sm font-semibold;
+  }
+
+  .display-heading {
+    @apply font-display text-silver uppercase tracking-wide leading-tight;
+  }
+
+  .gold-divider {
+    @apply w-16 h-[2px] bg-gold my-6;
+  }
+
+  .card-dark {
+    @apply bg-charcoal-light border border-white/5 p-8 transition-all duration-300
+           hover:border-gold/30 hover:-translate-y-1;
+  }
+
+  .input-dark {
+    @apply w-full bg-charcoal-mid border border-white/10 text-silver placeholder-slate
+           px-5 py-4 text-sm outline-none transition-all duration-200
+           focus:border-gold/60 focus:ring-1 focus:ring-gold/30;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #b89b5e, #d4b96e, #b89b5e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .noise-bg {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
