@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import WelcomeModal from "@/components/WelcomeModal";
 
 export const metadata: Metadata = {
   title: "Better Man",
@@ -27,7 +28,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="bg-charcoal text-silver antialiased">{children}</body>
+      <body className="bg-charcoal text-silver antialiased">
+        <WelcomeModal />
+        {children}
+      </body>
     </html>
   );
 }

@@ -75,6 +75,26 @@
   }
 }
 
+@layer components {
+  .nav-link {
+    @apply relative text-slate text-sm tracking-widest uppercase font-medium
+           transition-colors duration-200 hover:text-gold py-1;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute bottom-0 left-0 h-[1px] bg-gold w-0 transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .nav-link:active::after {
+    @apply opacity-60;
+  }
+}
+
 @layer utilities {
   .text-gradient-gold {
     background: linear-gradient(135deg, #b89b5e, #d4b96e, #b89b5e);
@@ -95,4 +115,19 @@
   100% {
     transform: translateX(-50%);
   }
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition {
+  animation: pageFadeIn 0.35s ease-out forwards;
 }
